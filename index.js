@@ -2,6 +2,7 @@ import { Miniflare } from "miniflare";
 
 const mf = new Miniflare({
     inspectorPort: 9229,
+    inspectorProxy: true,
     workers: [
         {
             scriptPath: './worker.js',
