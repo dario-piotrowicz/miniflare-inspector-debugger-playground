@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "miniflare": "^3.20241230.2"
+    "miniflare": "/Users/dario/Repos/workers-sdk/packages/miniflare"
   }
 }
