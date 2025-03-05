@@ -12,15 +12,19 @@ const mf = new Miniflare({
     ],
 });
 
-// a delay to help the debugger connect
-// await new Promise(r => setTimeout(r, 3_000));
+for (let i = 0; i < 5; i++) {
+    console.log(`\x1b[34m ${i}... \x1b[0m`)
 
-const resp = await mf.dispatchFetch("http://localhost");
+    await new Promise((r) => setTimeout(r, 5_000));
 
-const text = await resp.text();
+    const resp = await mf.dispatchFetch("http://localhost");
+    
+    const text = await resp.text();
+    
+    console.log(`response from worker: ${text}`);
+    
+    console.log('');
+}
 
-console.log(`response from worker: ${text}`);
-
-console.log('');
 
 await mf.dispose();

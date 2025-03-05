@@ -1,5 +1,11 @@
 export default {
     fetch() {
-        return new Response('hello world!');
+        const str = 'hello world!';
+
+        console.log('a console.log!');
+        console.log(str);
+
+        debugger;
+        return new Response(str);
     }
 }
